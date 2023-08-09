@@ -42,3 +42,5 @@ contract SmartContract_with_Front_end_interaction {
         emit withdraw(withdraw_val, Balance);
     }
 }
+
+
