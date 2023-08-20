@@ -8,7 +8,7 @@ export default function Homepage() {
     const [defaultAccount,setDefaultAccount] = useState(undefined);
     const [balance,setBalance] = useState(undefined);
     const [ethWallet,setEthWallet] = useState(undefined); 
-    const [mysmartcontract,setMysmartcontract] = useState(undefined); // it is the atm
+    const [mysmartcontract,setMysmartcontract] = useState(undefined);
     
     const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
     const smcABI = crypto_making_tree_abi.abi;
