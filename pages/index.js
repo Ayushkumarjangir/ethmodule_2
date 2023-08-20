@@ -29,7 +29,7 @@ export default function Homepage() {
 
     const withdraw = async() => {
         if (mysmartcontract) {
-            let tx = await mysmartcontract.Withdraw(39);
+            let tx = await mysmartcontract.Withdraw(27);
             await tx.wait();
             getBalance();
         }
@@ -83,11 +83,11 @@ export default function Homepage() {
 
     const initUser = () => {
         if(!ethWallet){
-            return <p>Please Install the MetaMask extension wallet in your Browser</p>;
+            return <p>Install Metamask in the browser</p>;
         }
 
         if(!defaultAccount){
-            return (<button onClick={connectWallettHandler}>"CONNECT TO THE METAMASK WALLET"</button>)
+            return (<button onClick={connectWallettHandler}>"Please connect to Metamask for further transaction"</button>)
         }
 
         getBalance();
@@ -96,8 +96,8 @@ export default function Homepage() {
             <div>
                 <p>Your Account : {defaultAccount}</p>
                 <p>Your Balance : {balance}</p>
-                <button onClick={deposit}>Deposite 39 ETH</button>
-                <button onClick={withdraw}>Withdraw 39 ETH</button>
+                <button onClick={deposit}>Deposit 39 ETH</button>
+                <button onClick={withdraw}>Withdraw 27 ETH</button>
             </div>
         )
     }
@@ -106,7 +106,7 @@ export default function Homepage() {
 
     return (
       <main className="container">
-        <header><h1><strong>YOU ARE WELCOME TO WALLET OF AYUSH JANGIR</strong></h1></header>
+        <header><h1><strong>Welcome! This is my(Ayush Jangir) wallet</strong></h1></header>
         <h2>{meMessage}</h2>
         {initUser()}
         <style jsx>{`
